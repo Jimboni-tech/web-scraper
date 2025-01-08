@@ -53,7 +53,8 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options = options, service = Service(ChromeDriverManager().install()))
 driver.get("https://www.amazon.com")
-findItemsOnePage("phone")
+product = input("Please give me the product you want more information about on Amazon: ")
+findItemsOnePage(product)
 
 driver.quit()
 
